@@ -5,6 +5,8 @@ from langgraph.graph import StateGraph, START, END, MessagesState
 import os
 from dotenv import load_dotenv
 from model_call import model
+import json
+load_dotenv()
 
 with open("Essay.json", "r") as f:
     Essay = json.load(f)
@@ -13,3 +15,4 @@ with open("Essay.json", "r") as f:
         response = model(essay_text)
         print(f"Feedback and Score:\n{response}\n") 
 
+print("Evaluation completed for all essays.")
