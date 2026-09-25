@@ -5,8 +5,6 @@ from langgraph.graph import StateGraph, START, END, MessagesState
 import os
 from dotenv import load_dotenv
 from model_call import model
-import json
-load_dotenv()
 
 with open("Essay.json", "r") as f:
     Essay = json.load(f)
